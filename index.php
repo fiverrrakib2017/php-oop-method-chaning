@@ -54,14 +54,15 @@ class Student implements BaseStudent{
 }
 
 class StudentManager {
-    public function introduceStudent($name){
-        $student=new Student($name);
-        $student->displayName();
+    public function introduceStudent($studentObj){
+        // $student=new Student($name);
+        // $student->displayName();
+        $studentObj->displayName();
     }
 }
-
+$stdObj=new Student("Rakib Mahmud");
 $student=new StudentManager();
-$student-> introduceStudent("Rakib Mahmud");
+$student->introduceStudent($stdObj);
 
 
 
